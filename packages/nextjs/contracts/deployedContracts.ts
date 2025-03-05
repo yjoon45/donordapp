@@ -4,6 +4,211 @@
  */
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
-const deployedContracts = {} as const;
+const deployedContracts = {
+  31337: {
+    DonorRegistration: {
+      address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      abi: [
+        {
+          inputs: [],
+          name: "AlreadyExists",
+          type: "error",
+        },
+        {
+          inputs: [],
+          name: "NotExists",
+          type: "error",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "id",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "bytes32",
+              name: "name",
+              type: "bytes32",
+            },
+            {
+              indexed: false,
+              internalType: "bytes32",
+              name: "bloodType",
+              type: "bytes32",
+            },
+          ],
+          name: "DonorRegistered",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_id",
+              type: "uint256",
+            },
+          ],
+          name: "getDonor",
+          outputs: [
+            {
+              components: [
+                {
+                  internalType: "uint256",
+                  name: "id",
+                  type: "uint256",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "name",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "bloodType",
+                  type: "bytes32",
+                },
+              ],
+              internalType: "struct DonorRegistration.Donor",
+              name: "",
+              type: "tuple",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_id",
+              type: "uint256",
+            },
+            {
+              internalType: "bytes32",
+              name: "_name",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "_bloodType",
+              type: "bytes32",
+            },
+          ],
+          name: "registerDonor",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+    },
+  },
+  80002: {
+    DonorRegistration: {
+      address: "0x0842921eCcdd955d52D91ea7979F815ACAd1846c",
+      abi: [
+        {
+          inputs: [],
+          name: "AlreadyExists",
+          type: "error",
+        },
+        {
+          inputs: [],
+          name: "NotExists",
+          type: "error",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "id",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "bytes32",
+              name: "name",
+              type: "bytes32",
+            },
+            {
+              indexed: false,
+              internalType: "bytes32",
+              name: "bloodType",
+              type: "bytes32",
+            },
+          ],
+          name: "DonorRegistered",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_id",
+              type: "uint256",
+            },
+          ],
+          name: "getDonor",
+          outputs: [
+            {
+              components: [
+                {
+                  internalType: "uint256",
+                  name: "id",
+                  type: "uint256",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "name",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "bloodType",
+                  type: "bytes32",
+                },
+              ],
+              internalType: "struct DonorRegistration.Donor",
+              name: "",
+              type: "tuple",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_id",
+              type: "uint256",
+            },
+            {
+              internalType: "bytes32",
+              name: "_name",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "_bloodType",
+              type: "bytes32",
+            },
+          ],
+          name: "registerDonor",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+    },
+  },
+} as const;
 
 export default deployedContracts satisfies GenericContractsDeclaration;

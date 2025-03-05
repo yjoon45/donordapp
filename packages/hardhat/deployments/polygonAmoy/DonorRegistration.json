@@ -1,0 +1,258 @@
+{
+  "address": "0x0842921eCcdd955d52D91ea7979F815ACAd1846c",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "AlreadyExists",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotExists",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "name",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "bloodType",
+          "type": "bytes32"
+        }
+      ],
+      "name": "DonorRegistered",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getDonor",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "name",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "bloodType",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct DonorRegistration.Donor",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_name",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_bloodType",
+          "type": "bytes32"
+        }
+      ],
+      "name": "registerDonor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xbc52432842f4c8622c5c1f8a12bd1b928bc030f538e4d105f755e132376b120b",
+  "receipt": {
+    "to": null,
+    "from": "0x45F6850460a5E40c756bDD3BCd73EEf182bB84e1",
+    "contractAddress": "0x0842921eCcdd955d52D91ea7979F815ACAd1846c",
+    "transactionIndex": 0,
+    "gasUsed": "173433",
+    "logsBloom": "0x00000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000002000000000800000000020000000000100000000000000000000000000000000000000000000000000000001000080000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000004000000000000000000001000000000000000002000000000000100000000000000000000000000000000000000000000000000000400000000000000000100000",
+    "blockHash": "0xe3c57533a683696977404f94b8f5b011d1a5e98e933b0ad15e510a238acf8974",
+    "transactionHash": "0xbc52432842f4c8622c5c1f8a12bd1b928bc030f538e4d105f755e132376b120b",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 18582757,
+        "transactionHash": "0xbc52432842f4c8622c5c1f8a12bd1b928bc030f538e4d105f755e132376b120b",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x00000000000000000000000045f6850460a5e40c756bdd3bcd73eef182bb84e1",
+          "0x000000000000000000000000915a2284d28bd93de7d6f31173b981204bb666e6"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000001769fba56c69e900000000000000000000000000000000000000000000000001e962d52494ad6b0000000000000000000000000000000000000000000006cb2e2789766766a50700000000000000000000000000000000000000000000000001d1f8d97f2843820000000000000000000000000000000000000000000006cb2e3ef3720cd30ef0",
+        "logIndex": 0,
+        "blockHash": "0xe3c57533a683696977404f94b8f5b011d1a5e98e933b0ad15e510a238acf8974"
+      }
+    ],
+    "blockNumber": 18582757,
+    "cumulativeGasUsed": "173433",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "e8bf6b7a4883dd5d1a2447595b798310",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"AlreadyExists\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotExists\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bloodType\",\"type\":\"bytes32\"}],\"name\":\"DonorRegistered\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"getDonor\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"bloodType\",\"type\":\"bytes32\"}],\"internalType\":\"struct DonorRegistration.Donor\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"_name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"_bloodType\",\"type\":\"bytes32\"}],\"name\":\"registerDonor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Uses a mapping to store donor details indexed by a unique ID.\",\"errors\":{\"AlreadyExists()\":[{\"details\":\"Custom error to indicate that a donor with the given ID already exists.\"}],\"NotExists()\":[{\"details\":\"Custom error to indicate that a donor with the given ID does not exist.\"}]},\"kind\":\"dev\",\"methods\":{\"getDonor(uint256)\":{\"params\":{\"_id\":\"The unique ID of the donor.\"},\"returns\":{\"_0\":\"Donor struct containing the donor's details.\"}},\"registerDonor(uint256,bytes32,bytes32)\":{\"details\":\"Ensures the donor ID is unique before storing the data.\",\"params\":{\"_bloodType\":\"The blood type of the donor (bytes32 format).\",\"_id\":\"The unique ID for the donor.\",\"_name\":\"The name of the donor (bytes32 format).\"}}},\"stateVariables\":{\"s_donor\":{\"details\":\"Storage variable to maintain a mapping of donor ID to donor details.\"}},\"title\":\"Donor Registration Contract\",\"version\":1},\"userdoc\":{\"events\":{\"DonorRegistered(uint256,bytes32,bytes32)\":{\"notice\":\"Event emitted when a new donor is registered.\"}},\"kind\":\"user\",\"methods\":{\"getDonor(uint256)\":{\"notice\":\"Fetches the donor details by ID.\"},\"registerDonor(uint256,bytes32,bytes32)\":{\"notice\":\"Registers a new donor.\"}},\"notice\":\"This contract allows users to register as donors and retrieve donor details.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/DonorRegistration.sol\":\"DonorRegistration\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/DonorRegistration.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.20;\\n\\n/// @title Donor Registration Contract\\n/// @notice This contract allows users to register as donors and retrieve donor details.\\n/// @dev Uses a mapping to store donor details indexed by a unique ID.\\ncontract DonorRegistration {\\n    /// @dev Structure to store donor details.\\n    struct Donor {\\n        uint256 id; // Unique identifier for the donor.\\n        bytes32 name; // Donor's name stored as bytes32 to save gas.\\n        bytes32 bloodType; // Donor's blood type stored as bytes32.\\n    }\\n\\n    /// @dev Storage variable to maintain a mapping of donor ID to donor details.\\n    mapping(uint256 => Donor) private s_donor;\\n\\n    /// @notice Event emitted when a new donor is registered.\\n    event DonorRegistered(uint256 id, bytes32 name, bytes32 bloodType);\\n\\n    /// @dev Custom error to indicate that a donor with the given ID already exists.\\n    error AlreadyExists();\\n\\n    /// @dev Custom error to indicate that a donor with the given ID does not exist.\\n    error NotExists();\\n\\n    /// @notice Fetches the donor details by ID.\\n    /// @param _id The unique ID of the donor.\\n    /// @return Donor struct containing the donor's details.\\n    function getDonor(uint256 _id) external view returns (Donor memory) {\\n        // Check if the donor exists; if not, revert with NotExists error.\\n        if (s_donor[_id].id == 0) {\\n            revert NotExists();\\n        }\\n\\n        return s_donor[_id];\\n    }\\n\\n    /// @notice Registers a new donor.\\n    /// @dev Ensures the donor ID is unique before storing the data.\\n    /// @param _id The unique ID for the donor.\\n    /// @param _name The name of the donor (bytes32 format).\\n    /// @param _bloodType The blood type of the donor (bytes32 format).\\n    function registerDonor(uint256 _id, bytes32 _name, bytes32 _bloodType) external {\\n        // Check if the donor already exists; if so, revert with AlreadyExists error.\\n        if (s_donor[_id].id != 0) {\\n            revert AlreadyExists();\\n        }\\n\\n        // Create a new donor struct and assign values.\\n        Donor memory singleDonor;\\n        singleDonor.id = _id;\\n        singleDonor.name = _name;\\n        singleDonor.bloodType = _bloodType;\\n\\n        // Store the donor struct in the mapping.\\n        s_donor[_id] = singleDonor;\\n\\n        // Emit an event to log the donor registration.\\n        emit DonorRegistered(_id, _name, _bloodType);\\n    }\\n}\\n\",\"keccak256\":\"0x6150f4b0e7dd86f0d6a05d7f77b63b9d7c23394a92e9b399ef31b3ee8558255c\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061022c806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80636136a9061461003b578063bf6b2a5914610074575b600080fd5b61004e6100493660046101b1565b610089565b604080518251815260208084015190820152918101519082015260600160405180910390f35b6100876100823660046101ca565b610107565b005b6040805160608101825260008082526020808301829052828401829052848252819052918220549091036100d057604051635861b41d60e01b815260040160405180910390fd5b5060009081526020818152604091829020825160608101845281548152600182015492810192909252600201549181019190915290565b600083815260208190526040902054156101345760405163119b4fd360e11b815260040160405180910390fd5b604080516060808201835285825260208083018681528385018681526000898152808452869020855181559151600183015551600290910155835187815290810186905292830184905290917f8978b828db3600aeddaa91601072e1f9448f76eb0f529d51fc61691299a5b510910160405180910390a150505050565b6000602082840312156101c357600080fd5b5035919050565b6000806000606084860312156101df57600080fd5b50508135936020830135935060409092013591905056fea26469706673582212204db7dc85813f7449604c418b14fd431b467cfde99a1fa073d1ffe4d1544237fe64736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80636136a9061461003b578063bf6b2a5914610074575b600080fd5b61004e6100493660046101b1565b610089565b604080518251815260208084015190820152918101519082015260600160405180910390f35b6100876100823660046101ca565b610107565b005b6040805160608101825260008082526020808301829052828401829052848252819052918220549091036100d057604051635861b41d60e01b815260040160405180910390fd5b5060009081526020818152604091829020825160608101845281548152600182015492810192909252600201549181019190915290565b600083815260208190526040902054156101345760405163119b4fd360e11b815260040160405180910390fd5b604080516060808201835285825260208083018681528385018681526000898152808452869020855181559151600183015551600290910155835187815290810186905292830184905290917f8978b828db3600aeddaa91601072e1f9448f76eb0f529d51fc61691299a5b510910160405180910390a150505050565b6000602082840312156101c357600080fd5b5035919050565b6000806000606084860312156101df57600080fd5b50508135936020830135935060409092013591905056fea26469706673582212204db7dc85813f7449604c418b14fd431b467cfde99a1fa073d1ffe4d1544237fe64736f6c63430008140033",
+  "devdoc": {
+    "details": "Uses a mapping to store donor details indexed by a unique ID.",
+    "errors": {
+      "AlreadyExists()": [
+        {
+          "details": "Custom error to indicate that a donor with the given ID already exists."
+        }
+      ],
+      "NotExists()": [
+        {
+          "details": "Custom error to indicate that a donor with the given ID does not exist."
+        }
+      ]
+    },
+    "kind": "dev",
+    "methods": {
+      "getDonor(uint256)": {
+        "params": {
+          "_id": "The unique ID of the donor."
+        },
+        "returns": {
+          "_0": "Donor struct containing the donor's details."
+        }
+      },
+      "registerDonor(uint256,bytes32,bytes32)": {
+        "details": "Ensures the donor ID is unique before storing the data.",
+        "params": {
+          "_bloodType": "The blood type of the donor (bytes32 format).",
+          "_id": "The unique ID for the donor.",
+          "_name": "The name of the donor (bytes32 format)."
+        }
+      }
+    },
+    "stateVariables": {
+      "s_donor": {
+        "details": "Storage variable to maintain a mapping of donor ID to donor details."
+      }
+    },
+    "title": "Donor Registration Contract",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "DonorRegistered(uint256,bytes32,bytes32)": {
+        "notice": "Event emitted when a new donor is registered."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "getDonor(uint256)": {
+        "notice": "Fetches the donor details by ID."
+      },
+      "registerDonor(uint256,bytes32,bytes32)": {
+        "notice": "Registers a new donor."
+      }
+    },
+    "notice": "This contract allows users to register as donors and retrieve donor details.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 16,
+        "contract": "contracts/DonorRegistration.sol:DonorRegistration",
+        "label": "s_donor",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_uint256,t_struct(Donor)10_storage)"
+      }
+    ],
+    "types": {
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_uint256,t_struct(Donor)10_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => struct DonorRegistration.Donor)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Donor)10_storage"
+      },
+      "t_struct(Donor)10_storage": {
+        "encoding": "inplace",
+        "label": "struct DonorRegistration.Donor",
+        "members": [
+          {
+            "astId": 5,
+            "contract": "contracts/DonorRegistration.sol:DonorRegistration",
+            "label": "id",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 7,
+            "contract": "contracts/DonorRegistration.sol:DonorRegistration",
+            "label": "name",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bytes32"
+          },
+          {
+            "astId": 9,
+            "contract": "contracts/DonorRegistration.sol:DonorRegistration",
+            "label": "bloodType",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_bytes32"
+          }
+        ],
+        "numberOfBytes": "96"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

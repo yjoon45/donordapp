@@ -1,0 +1,36 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/DonorRegistration.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\n/// @title Donor Registration Contract\n/// @notice This contract allows users to register as donors and retrieve donor details.\n/// @dev Uses a mapping to store donor details indexed by a unique ID.\ncontract DonorRegistration {\n    /// @dev Structure to store donor details.\n    struct Donor {\n        uint256 id; // Unique identifier for the donor.\n        bytes32 name; // Donor's name stored as bytes32 to save gas.\n        bytes32 bloodType; // Donor's blood type stored as bytes32.\n    }\n\n    /// @dev Storage variable to maintain a mapping of donor ID to donor details.\n    mapping(uint256 => Donor) private s_donor;\n\n    /// @notice Event emitted when a new donor is registered.\n    event DonorRegistered(uint256 id, bytes32 name, bytes32 bloodType);\n\n    /// @dev Custom error to indicate that a donor with the given ID already exists.\n    error AlreadyExists();\n\n    /// @dev Custom error to indicate that a donor with the given ID does not exist.\n    error NotExists();\n\n    /// @notice Fetches the donor details by ID.\n    /// @param _id The unique ID of the donor.\n    /// @return Donor struct containing the donor's details.\n    function getDonor(uint256 _id) external view returns (Donor memory) {\n        // Check if the donor exists; if not, revert with NotExists error.\n        if (s_donor[_id].id == 0) {\n            revert NotExists();\n        }\n\n        return s_donor[_id];\n    }\n\n    /// @notice Registers a new donor.\n    /// @dev Ensures the donor ID is unique before storing the data.\n    /// @param _id The unique ID for the donor.\n    /// @param _name The name of the donor (bytes32 format).\n    /// @param _bloodType The blood type of the donor (bytes32 format).\n    function registerDonor(uint256 _id, bytes32 _name, bytes32 _bloodType) external {\n        // Check if the donor already exists; if so, revert with AlreadyExists error.\n        if (s_donor[_id].id != 0) {\n            revert AlreadyExists();\n        }\n\n        // Create a new donor struct and assign values.\n        Donor memory singleDonor;\n        singleDonor.id = _id;\n        singleDonor.name = _name;\n        singleDonor.bloodType = _bloodType;\n\n        // Store the donor struct in the mapping.\n        s_donor[_id] = singleDonor;\n\n        // Emit an event to log the donor registration.\n        emit DonorRegistered(_id, _name, _bloodType);\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "paris",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
